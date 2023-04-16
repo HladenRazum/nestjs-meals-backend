@@ -1,20 +1,3 @@
-import { IsArray, IsNotEmpty, IsOptional, IsString } from 'class-validator';
+import { CreateArticleDto } from './createArticle.dto';
 
-export class UpdateArticleDto {
-  @IsNotEmpty()
-  @IsString()
-  readonly title: string;
-
-  @IsString()
-  @IsOptional()
-  readonly description?: string;
-
-  @IsString()
-  @IsOptional()
-  readonly body?: string;
-
-  @IsArray()
-  @IsString({ each: true })
-  @IsOptional()
-  readonly tagList?: string[];
-}
+export class UpdateArticleDto extends CreateArticleDto {}
