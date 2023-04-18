@@ -5,11 +5,11 @@ export class AddUsernameToUsers1678302212781 implements MigrationInterface {
 
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(
-      `ALTER TABLE "users " ADD "username" character varying NOT NULL`,
+      `ALTER TABLE "users" ADD "username" character varying NOT NULL`,
     );
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.query(`ALTER TABLE "users " DROP COLUMN "username"`);
+    await queryRunner.query(`ALTER TABLE "users" DROP COLUMN "username"`);
   }
 }
