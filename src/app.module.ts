@@ -9,6 +9,7 @@ import { UserModule } from './modules/user/user.module';
 import { ArticleModule } from './modules/article/article.module';
 import ormconfig from './ormconfig';
 import { AuthMiddleware } from './middlewares/auth.middleware';
+import { ProfileModule } from './modules/profile/profile.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { AuthMiddleware } from './middlewares/auth.middleware';
     TagModule,
     UserModule,
     ArticleModule,
+    ProfileModule,
     WinstonModule.forRoot({
       level: 'error',
       format: winston.format.combine(

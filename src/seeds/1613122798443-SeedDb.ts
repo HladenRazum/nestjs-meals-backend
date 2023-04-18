@@ -21,7 +21,7 @@ export class SeedDb1613122798443 implements MigrationInterface {
     await queryRunner.query(
       `INSERT INTO articles (slug, title, description, body, "tagList", "authorId") VALUES
         ('first-article', 'First Article', 'first article description', 'first article body', 'coffee,dragons,reactjs', 1),
-        ('second-article', 'Second Article', 'second article description', 'second article body', 'mathematics, data science, reactjs', 2)`,
+        ('second-article', 'Second Article', 'second article description', 'second article body', 'mathematics,data science,reactjs', 2)`,
     );
   }
 
