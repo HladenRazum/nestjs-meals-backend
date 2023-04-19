@@ -11,7 +11,7 @@ export class SeedDb1613122798443 implements MigrationInterface {
          ('javascript')`,
     );
 
-    // password is 123
+    // password is 1234
     await queryRunner.query(
       `INSERT INTO users (username, email, password) VALUES 
       ('111', '111@abv.bg', '$2b$10$X1bxfJUyHEoYSWIkTm7xBuP6n24U8Yp71N6RdfsZVgoBEk8TyrBJG'),
